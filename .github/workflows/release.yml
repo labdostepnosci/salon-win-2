@@ -1,0 +1,74 @@
+name: Release theme
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Resolve version
+        shell: bash
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          echo "VERSION=${VERSION}" >> "$GITHUB_ENV"
+          echo "ZIP_NAME=salon-win-${VERSION}.zip" >> "$GITHUB_ENV"
+          echo "COMPAT_ZIP_NAME=salon-win-theme-${VERSION}.zip" >> "$GITHUB_ENV"
+
+      - name: Validate theme version
+        shell: bash
+        run: |
+          if ! grep -q "Version: ${VERSION}" salon-win-main/style.css; then
+            echo "salon-win-main/style.css version does not match tag v${VERSION}"
+            exit 1
+          fi
+
+      - name: Prepare theme package
+        shell: bash
+        run: |
+          rm -rf build
+          mkdir -p build/salon-win
+
+          rsync -a salon-win-main/ build/salon-win/ \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.gitignore' \
+            --exclude='.gitattributes' \
+            --exclude='build/' \
+            --exclude='node_modules/' \
+            --exclude='vendor/' \
+            --exclude='.DS_Store' \
+            --exclude='Thumbs.db' \
+            --exclude='package.json' \
+            --exclude='package-lock.json' \
+            --exclude='composer.json' \
+            --exclude='composer.lock' \
+            --exclude='*.cache' \
+            --exclude='*.tmp' \
+            --exclude='*.temp'
+
+      - name: Create ZIP archives
+        shell: bash
+        run: |
+          cd build
+          zip -r "${ZIP_NAME}" salon-win
+          cp "${ZIP_NAME}" "${COMPAT_ZIP_NAME}"
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Salon Win ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name }}
+          body: Automatyczne wydanie motywu Salon Win.
+          files: |
+            build/${{ env.ZIP_NAME }}
+            build/${{ env.COMPAT_ZIP_NAME }}

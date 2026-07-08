@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.0.7] - 2026-07-08
+
+### Added
+- Uruchomiono automatyczny proces publikacji GitHub Releases po wypchnięciu taga `vX.Y.Z`.
+- Dodano workflow GitHub Actions przygotowujący paczkę ZIP motywu i publikujący ją jako asset release.
+
+### Changed
+- Uporządkowano wersjonowanie motywu od wersji `0.0.7`.
+- Zaktualizowano instrukcję wydawania wersji pod automatyczne GitHub Releases.
+
+### Checked
+- Zachowano `GitHub Theme URI` i `Primary Branch` w `style.css`.
+- Nie zmieniono mechanizmu updatera GitHub Releases.
+
+## [0.0.5] - 2026-07-08
+
+### Changed
+- Ujednolicono szablony stron, wpisów, archiwów, strony 404 i widoków WooCommerce z językiem wizualnym strony głównej.
+- Dodano wspólny system stylów dla treści, nagłówków, akapitów, zdjęć, galerii, przycisków, cytatów, paginacji oraz bloków Gutenberg, Kadence i UAGB.
+- Poprawiono czytelność długich treści przez ograniczenie szerokości kolumny, spokojniejsze odstępy i spójne proporcje zdjęć.
+- Dodano wsparcie edytora dla stylów motywu, szerokiego wyrównania i responsywnych osadzeń.
+- Uporządkowano semantykę bloków nagłówkowych w treści pojedynczych widoków, aby tytuł szablonu pozostał głównym H1.
+
+### Checked
+- Sprawdzono, że `GitHub Theme URI` i `Primary Branch` w `style.css` pozostały bez zmian.
+- Sprawdzono, że mechanizm GitHub Releases / updater nie został zmieniony.
+
 ## [0.0.4] - 2026-07-04
 
 ### Added

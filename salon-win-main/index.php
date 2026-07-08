@@ -7,12 +7,12 @@
 get_header();
 ?>
 
-<main id="main-content" class="section" style="min-height: 60vh; padding-top: 120px;">
+<main id="main-content" class="sw-archive-main section">
     <div class="container">
 
         <?php if ( have_posts() ) : ?>
 
-            <div class="section-header" style="margin-bottom: var(--space-lg);">
+            <div class="section-header sw-archive-header">
                 <span class="eyebrow">
                     <?php
                     if ( is_category() )      single_cat_title( '', true );
@@ -33,9 +33,9 @@ get_header();
                 </h1>
             </div>
 
-            <div class="grid-3" style="margin-bottom: var(--space-xl);">
+            <div class="sw-post-grid">
                 <?php while ( have_posts() ) : the_post(); ?>
-                <article id="post-<?php the_ID(); ?>" <?php post_class( 'wine-card' ); ?> style="background: var(--color-white); border: 1px solid rgba(26,10,0,0.08);">
+                <article id="post-<?php the_ID(); ?>" <?php post_class( 'wine-card sw-archive-card' ); ?>>
                     <?php if ( has_post_thumbnail() ) : ?>
                     <a href="<?php the_permalink(); ?>" class="wine-card-image" tabindex="-1">
                         <?php the_post_thumbnail( 'sw-gallery', [ 'loading' => 'lazy', 'alt' => get_the_title() ] ); ?>
@@ -46,8 +46,8 @@ get_header();
                         <h2 class="wine-name" style="color: var(--color-ink);">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h2>
-                        <p class="body-sm text-muted" style="margin-top: 0.5rem;"><?php the_excerpt(); ?></p>
-                        <a href="<?php the_permalink(); ?>" class="btn btn-ghost" style="margin-top: var(--space-sm); padding: 0.6rem 1.25rem;">
+                        <p class="body-sm text-muted sw-archive-excerpt"><?php the_excerpt(); ?></p>
+                        <a href="<?php the_permalink(); ?>" class="btn btn-ghost sw-archive-link">
                             <span><?php esc_html_e( 'Przeczytaj wpis', 'salon-win' ); ?></span>
                         </a>
                     </div>
@@ -55,7 +55,7 @@ get_header();
                 <?php endwhile; ?>
             </div>
 
-            <div style="display: flex; justify-content: center;">
+            <div class="sw-pagination-wrap">
                 <?php the_posts_pagination( [
                     'prev_text' => '<i class="fas fa-arrow-left"></i>',
                     'next_text' => '<i class="fas fa-arrow-right"></i>',
@@ -65,15 +65,15 @@ get_header();
 
         <?php else : ?>
 
-            <div class="text-center" style="padding: var(--space-xl) 0;">
+            <div class="text-center sw-empty-state">
                 <span class="eyebrow"><?php esc_html_e( '404', 'salon-win' ); ?></span>
-                <h1 class="display-md" style="margin: var(--space-sm) 0;">
+                <h1 class="display-md sw-page-title">
                     <?php esc_html_e( 'Strona nie istnieje', 'salon-win' ); ?>
                 </h1>
-                <p class="body-lg text-muted" style="max-width: 40ch; margin: 0 auto var(--space-lg);">
+                <p class="body-lg text-muted">
                     <?php esc_html_e( 'Nie znaleźliśmy szukanej strony. Wróć na stronę główną albo zobacz apartamenty, wydarzenia i spokojne pobyty w Salon Win.', 'salon-win' ); ?>
                 </p>
-                <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                <div class="sw-empty-actions">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-primary">
                         <span><?php esc_html_e( 'Wróć na stronę główną', 'salon-win' ); ?></span>
                     </a>

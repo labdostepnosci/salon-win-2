@@ -7,13 +7,13 @@
 get_header();
 ?>
 
-<main id="main-content" style="padding-top: 100px; min-height: 70vh;">
-    <div class="section">
+<main id="main-content" class="sw-subpage-main sw-shop-main">
+    <div class="section sw-content-section">
         <div class="container">
 
             <!-- WooCommerce breadcrumb -->
             <?php if ( function_exists( 'woocommerce_breadcrumb' ) ) : ?>
-            <div class="mb-md" style="padding-bottom: var(--space-sm); border-bottom: 1px solid rgba(26,10,0,0.08);">
+            <div class="sw-breadcrumb-wrap">
                 <?php woocommerce_breadcrumb(); ?>
             </div>
             <?php endif; ?>

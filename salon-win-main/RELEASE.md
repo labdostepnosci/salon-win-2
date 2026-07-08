@@ -1,6 +1,6 @@
 # Wydania motywu Salon Win
 
-Aktualna wersja motywu `Salon Win by labdostepnosci` to `0.0.4`. Numer wersji
+Aktualna wersja motywu `Salon Win by labdostepnosci` to `0.0.7`. Numer wersji
 jest ustawiany w nagłówku pliku `style.css` i musi być zgodny z SemVer.
 
 ## Publikowanie wersji przez GitHub Releases
@@ -11,15 +11,21 @@ Każda wersja motywu musi mieć:
 - wpis w `CHANGELOG.md`,
 - commit,
 - tag Git w formacie `vX.Y.Z`,
-- GitHub Release utworzony z tego taga,
-- paczkę ZIP motywu dołączoną jako asset Release.
+- GitHub Release utworzony automatycznie przez GitHub Actions po wypchnięciu taga,
+- paczkę ZIP motywu dołączoną automatycznie jako asset Release.
 
 Zmiany przeznaczone dla WordPressa należy publikować jako kompletne wydania.
 Sam commit wypchnięty na `main` nie jest wydaniem motywu.
 
 ## Nazewnictwo paczki ZIP
 
-Paczka ZIP musi mieć nazwę:
+Workflow tworzy paczkę ZIP wymaganą dla release:
+
+```text
+salon-win-X.Y.Z.zip
+```
+
+Dla zgodności z obecnym updaterem motywu workflow dołącza także drugi asset:
 
 ```text
 salon-win-theme-X.Y.Z.zip
@@ -28,8 +34,8 @@ salon-win-theme-X.Y.Z.zip
 Przykłady:
 
 ```text
-salon-win-theme-0.0.1.zip
-salon-win-theme-0.0.2.zip
+salon-win-0.0.7.zip
+salon-win-theme-0.0.7.zip
 ```
 
 W katalogu głównym archiwum musi znajdować się jeden katalog `salon-win/`,
@@ -46,14 +52,14 @@ nowe/
 ```
 
 Automatyczne archiwa „Source code” tworzone przez GitHub nie gwarantują
-wymaganej nazwy katalogu głównego. Asset ZIP motywu należy przygotować
-oddzielnie i dołączyć do Release.
+wymaganej nazwy katalogu głównego. Dlatego asset ZIP motywu przygotowuje
+workflow `.github/workflows/release.yml`.
 
 Paczka produkcyjna nie może zawierać `.git/`, zbędnego `.github/`,
 `node_modules/`, niewymaganego `vendor/`, plików tymczasowych, lokalnych
 ustawień IDE, `.DS_Store` ani `Thumbs.db`.
 
-## Publikowanie nowej wersji
+## Publikowanie nowej wersji od 0.0.7
 
 1. Utworzyć branch:
 
@@ -74,20 +80,20 @@ ustawień IDE, `.DS_Store` ani `Thumbs.db`.
 4. Podbić wersję w `style.css`, na przykład:
 
    ```text
-   Version: 0.0.5
+   Version: 0.0.8
    ```
 
 5. Uzupełnić `CHANGELOG.md`:
 
    ```markdown
-   ## [0.0.5] - YYYY-MM-DD
+   ## [0.0.8] - YYYY-MM-DD
    ```
 
 6. Zrobić commit:
 
    ```bash
    git add .
-   git commit -m "Release version 0.0.5"
+   git commit -m "Release version 0.0.8"
    ```
 
 7. Zmergować zmiany do `main`:
@@ -102,29 +108,21 @@ ustawień IDE, `.DS_Store` ani `Thumbs.db`.
 8. Utworzyć i wypchnąć tag:
 
    ```bash
-   git tag -a v0.0.5 -m "Release 0.0.5"
-   git push origin v0.0.5
+   git tag -a v0.0.8 -m "Release 0.0.8"
+   git push origin v0.0.8
    ```
 
-9. Przygotować paczkę `salon-win-theme-0.0.5.zip` z katalogiem
-   `salon-win/` w środku.
+9. Po wypchnięciu taga workflow GitHub Actions automatycznie:
 
-10. Utworzyć GitHub Release:
+   - przygotuje katalog `salon-win/` z zawartości `salon-win-main/`,
+   - spakuje motyw do `salon-win-0.0.8.zip`,
+   - przygotuje kompatybilny asset `salon-win-theme-0.0.8.zip`,
+   - utworzy GitHub Release,
+   - dołączy paczki ZIP jako assety release.
 
-    - tag: `v0.0.5`,
-    - tytuł: `Release 0.0.5`,
-    - opis: treść odpowiedniego wpisu z `CHANGELOG.md`,
-    - asset: `salon-win-theme-0.0.5.zip`.
+Nie należy ręcznie wrzucać ZIP-a, jeśli workflow zakończy się poprawnie.
 
-11. W WordPressie uruchomić aktualizację motywu z GitHub Release.
-
-Przykładowa publikacja przez GitHub CLI:
-
-```bash
-gh release create v0.0.5 salon-win-theme-0.0.5.zip \
-  --title "Release 0.0.5" \
-  --notes-file RELEASE_NOTES_0.0.5.md
-```
+10. W WordPressie uruchomić aktualizację motywu z GitHub Release.
 
 ## Wydanie 0.0.1
 

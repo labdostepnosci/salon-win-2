@@ -6,22 +6,22 @@
 get_header();
 ?>
 
-<main id="main-content" style="padding-top: 100px; min-height: 80vh; display:flex; align-items:center;">
+<main id="main-content" class="sw-error-main">
     <div class="container text-center">
-        <div style="max-width: 560px; margin: 0 auto;">
-            <span class="eyebrow" style="color: var(--color-burgundy);">404</span>
+        <div class="sw-error-panel">
+            <span class="eyebrow">404</span>
 
-            <h1 class="display-md" style="margin: var(--space-sm) 0 var(--space-md);">
+            <h1 class="display-md sw-page-title">
                 <?php esc_html_e( 'Ta strona odpoczywa gdzie indziej', 'salon-win' ); ?>
             </h1>
 
-            <p class="body-lg text-muted" style="margin-bottom: var(--space-lg);">
+            <p class="body-lg text-muted">
                 <?php esc_html_e( 'Szukana strona nie istnieje lub została przeniesiona. Wróć na stronę główną albo zobacz apartamenty, wydarzenia i spokojne pobyty w Jaśle.', 'salon-win' ); ?>
             </p>
 
             <?php get_search_form(); ?>
 
-            <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+            <div class="sw-empty-actions">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-primary">
                     <span><?php esc_html_e( 'Wróć na stronę główną', 'salon-win' ); ?></span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>

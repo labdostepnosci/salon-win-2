@@ -29,6 +29,10 @@ function salon_win_setup() {
     add_theme_support( 'html5', [ 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ] );
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'customize-selective-refresh-widgets' );
+    add_theme_support( 'align-wide' );
+    add_theme_support( 'responsive-embeds' );
+    add_theme_support( 'editor-styles' );
+    add_editor_style( 'style.css' );
     add_theme_support( 'wc-product-gallery-zoom' );
     add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
@@ -111,6 +115,27 @@ function salon_win_enqueue() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'salon_win_enqueue' );
+
+/* ===================================================
+   3a. FRONTEND BLOCK NORMALIZATION
+=================================================== */
+function salon_win_normalize_content_heading_levels( $parsed_block ) {
+    if ( is_admin() || ! is_singular() ) {
+        return $parsed_block;
+    }
+
+    if (
+        isset( $parsed_block['blockName'] ) &&
+        'core/heading' === $parsed_block['blockName'] &&
+        isset( $parsed_block['attrs']['level'] ) &&
+        1 === (int) $parsed_block['attrs']['level']
+    ) {
+        $parsed_block['attrs']['level'] = 2;
+    }
+
+    return $parsed_block;
+}
+add_filter( 'render_block_data', 'salon_win_normalize_content_heading_levels' );
 
 /* ===================================================
    4. REGISTER WIDGET AREAS
