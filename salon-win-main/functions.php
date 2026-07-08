@@ -395,7 +395,7 @@ function salon_win_handle_booking() {
     ];
 
     if ( empty( $data['name'] ) || empty( $data['email'] ) || empty( $data['date'] ) ) {
-        wp_send_json_error( [ 'message' => __( 'Wypełnij wymagane pola.', 'salon-win' ) ] );
+        wp_send_json_error( [ 'message' => __( 'Uzupełnij wymagane pola, abyśmy mogli odpowiedzieć na zapytanie.', 'salon-win' ) ] );
     }
 
     if ( ! is_email( $data['email'] ) ) {
@@ -410,7 +410,7 @@ function salon_win_handle_booking() {
     ] );
 
     if ( is_wp_error( $post_id ) || ! $post_id ) {
-        wp_send_json_error( [ 'message' => __( 'Nie udało się zapisać rezerwacji. Spróbuj ponownie lub zadzwoń do nas.', 'salon-win' ) ] );
+        wp_send_json_error( [ 'message' => __( 'Nie udało się zapisać zapytania. Spróbuj ponownie lub zadzwoń do nas.', 'salon-win' ) ] );
     }
 
     foreach ( $data as $key => $value ) {
@@ -431,14 +431,14 @@ function salon_win_handle_booking() {
     wp_mail( $admin_email, $subject, $message );
 
     // Confirmation to guest
-    $guest_subject = __( 'Otrzymaliśmy Twoje zapytanie — Salon Win', 'salon-win' );
+    $guest_subject = __( 'Otrzymaliśmy Twoje zapytanie - Salon Win', 'salon-win' );
     $guest_message = sprintf(
         "Dzień dobry %s,\n\nDziękujemy za zapytanie rezerwacyjne w Salon Win.\n\nData: %s, godzina: %s\nLiczba gości: %d\nRodzaj: %s\n\nSprawdzimy dostępność i wrócimy z potwierdzeniem albo propozycją najlepszego wariantu pobytu.\n\nSalon Win\nhttps://salon-win.pl",
         $data['name'], $data['date'], $data['time'], $data['guests'], $data['type']
     );
     wp_mail( $data['email'], $guest_subject, $guest_message );
 
-    wp_send_json_success( [ 'message' => __( 'Zapytanie zapisane. Otrzymasz e-mail, a zespół Salon Win wróci z potwierdzeniem dostępności.', 'salon-win' ) ] );
+    wp_send_json_success( [ 'message' => __( 'Dziękujemy za zapytanie. Otrzymasz e-mail, a zespół Salon Win wróci z informacją o dostępności.', 'salon-win' ) ] );
 }
 add_action( 'wp_ajax_salon_win_booking',        'salon_win_handle_booking' );
 add_action( 'wp_ajax_nopriv_salon_win_booking', 'salon_win_handle_booking' );
@@ -465,7 +465,7 @@ function salon_win_handle_newsletter() {
     $subscribers[] = $email;
     update_option( 'sw_newsletter_subscribers', $subscribers );
 
-    wp_send_json_success( [ 'message' => __( 'Dziękujemy za zapis do newslettera.', 'salon-win' ) ] );
+    wp_send_json_success( [ 'message' => __( 'Dziękujemy za zapis. Będziemy wysyłać spokojne wiadomości o pobytach, warsztatach i wydarzeniach Salon Win.', 'salon-win' ) ] );
 }
 add_action( 'wp_ajax_salon_win_newsletter',        'salon_win_handle_newsletter' );
 add_action( 'wp_ajax_nopriv_salon_win_newsletter', 'salon_win_handle_newsletter' );

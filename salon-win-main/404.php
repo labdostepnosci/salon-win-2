@@ -12,25 +12,25 @@ get_header();
             <span class="eyebrow" style="color: var(--color-burgundy);">404</span>
 
             <h1 class="display-md" style="margin: var(--space-sm) 0 var(--space-md);">
-                <?php esc_html_e( 'Tej strony nie ma w naszej piwnicy', 'salon-win' ); ?>
+                <?php esc_html_e( 'Ta strona odpoczywa gdzie indziej', 'salon-win' ); ?>
             </h1>
 
             <p class="body-lg text-muted" style="margin-bottom: var(--space-lg);">
-                <?php esc_html_e( 'Szukana strona nie istnieje lub została przeniesiona. Wróć na stronę główną lub odkryj naszą ofertę win.', 'salon-win' ); ?>
+                <?php esc_html_e( 'Szukana strona nie istnieje lub została przeniesiona. Wróć na stronę główną albo zobacz apartamenty, wydarzenia i spokojne pobyty w Jaśle.', 'salon-win' ); ?>
             </p>
 
             <?php get_search_form(); ?>
 
             <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-primary">
-                    <span><?php esc_html_e( 'Strona główna', 'salon-win' ); ?></span>
+                    <span><?php esc_html_e( 'Wróć na stronę główną', 'salon-win' ); ?></span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
                 <?php
                 $shop_url = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'shop' ) : home_url( '/sklep' );
                 ?>
                 <a href="<?php echo esc_url( $shop_url ); ?>" class="btn btn-ghost">
-                    <span><?php esc_html_e( 'Sklep z winami', 'salon-win' ); ?></span>
+                    <span><?php esc_html_e( 'Zobacz wina Salon Win', 'salon-win' ); ?></span>
                 </a>
             </div>
         </div>

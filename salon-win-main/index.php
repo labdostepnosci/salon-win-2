@@ -48,7 +48,7 @@ get_header();
                         </h2>
                         <p class="body-sm text-muted" style="margin-top: 0.5rem;"><?php the_excerpt(); ?></p>
                         <a href="<?php the_permalink(); ?>" class="btn btn-ghost" style="margin-top: var(--space-sm); padding: 0.6rem 1.25rem;">
-                            <span><?php esc_html_e( 'Czytaj więcej', 'salon-win' ); ?></span>
+                            <span><?php esc_html_e( 'Przeczytaj wpis', 'salon-win' ); ?></span>
                         </a>
                     </div>
                 </article>
@@ -71,14 +71,14 @@ get_header();
                     <?php esc_html_e( 'Strona nie istnieje', 'salon-win' ); ?>
                 </h1>
                 <p class="body-lg text-muted" style="max-width: 40ch; margin: 0 auto var(--space-lg);">
-                    <?php esc_html_e( 'Nie znaleźliśmy szukanej strony. Wróć na stronę główną lub przeglądaj naszą ofertę.', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Nie znaleźliśmy szukanej strony. Wróć na stronę główną albo zobacz apartamenty, wydarzenia i spokojne pobyty w Salon Win.', 'salon-win' ); ?>
                 </p>
                 <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-primary">
-                        <span><?php esc_html_e( 'Strona główna', 'salon-win' ); ?></span>
+                        <span><?php esc_html_e( 'Wróć na stronę główną', 'salon-win' ); ?></span>
                     </a>
                     <a href="<?php echo esc_url( home_url( '/wina' ) ); ?>" class="btn btn-ghost">
-                        <span><?php esc_html_e( 'Przeglądaj wina', 'salon-win' ); ?></span>
+                        <span><?php esc_html_e( 'Zobacz wina Salon Win', 'salon-win' ); ?></span>
                     </a>
                 </div>
             </div>

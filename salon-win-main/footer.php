@@ -10,7 +10,7 @@ $address       = get_option( 'sw_address',       'ul. Wyspiańskiego 16' );
 $postal_code   = get_option( 'sw_postal_code',   '38-200' );
 $city          = get_option( 'sw_city',          'Jasło' );
 $restaurant_hours = salon_win_restaurant_hours();
-$hotel_day     = get_option( 'sw_hotel_day',     '14:00–11:00' );
+$hotel_day     = get_option( 'sw_hotel_day',     '14:00-11:00' );
 $instagram     = get_option( 'sw_instagram',      '#' );
 $facebook      = get_option( 'sw_facebook',       '#' );
 $booking_url      = get_option( 'sw_booking_url', 'https://www.booking.com/index.pl.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaLYBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALGyr7RBsACAdICJGY4YjBkYTY5LTdkYzgtNDU0Zi1hZTZkLWZjNjBiZjkzYzIxMdgCAeACAQ' );
@@ -33,7 +33,7 @@ $year          = date( 'Y' );
                 </a>
 
                 <p>
-                    <?php esc_html_e( 'Kameralny obiekt w Jaśle: noclegi biznesowe, pobyty wypoczynkowe, restauracja, wellness, warsztaty, eventy gastro, sesje foto i galeria sztuki.', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Kameralne apartamenty w Jaśle, ogród, sztuka, wino i spokojna przestrzeń do pobytu, warsztatów, degustacji oraz niewielkich wydarzeń.', 'salon-win' ); ?>
                 </p>
 
                 <!-- Social Links -->
@@ -66,11 +66,11 @@ $year          = date( 'Y' );
             <div class="footer-col">
                 <h4><?php esc_html_e( 'Nawigacja', 'salon-win' ); ?></h4>
                 <ul>
-                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Strona Główna', 'salon-win' ); ?></a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/#rezerwacja' ) ); ?>"><?php esc_html_e( 'Rezerwacja', 'salon-win' ); ?></a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/#pobyt' ) ); ?>"><?php esc_html_e( 'Noclegi i doświadczenia', 'salon-win' ); ?></a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/degustacje' ) ); ?>"><?php esc_html_e( 'Wydarzenia', 'salon-win' ); ?></a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/#okolica' ) ); ?>"><?php esc_html_e( 'Wellbeing i program pobytu', 'salon-win' ); ?></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Strona główna', 'salon-win' ); ?></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/#rezerwacja' ) ); ?>"><?php esc_html_e( 'Zapytaj o pobyt', 'salon-win' ); ?></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/#pobyt' ) ); ?>"><?php esc_html_e( 'Apartamenty i doświadczenia', 'salon-win' ); ?></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/degustacje' ) ); ?>"><?php esc_html_e( 'Wydarzenia kameralne', 'salon-win' ); ?></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/#okolica' ) ); ?>"><?php esc_html_e( 'Region jasielski i slow travel', 'salon-win' ); ?></a></li>
                     <li><a href="<?php echo esc_url( $shop_url ); ?>"><?php esc_html_e( 'Sklep z winami', 'salon-win' ); ?></a></li>
                     <li><a href="<?php echo esc_url( home_url( '/galeria' ) ); ?>"><?php esc_html_e( 'Galeria', 'salon-win' ); ?></a></li>
                     <li><a href="<?php echo esc_url( home_url( '/blog' ) ); ?>"><?php esc_html_e( 'Blog', 'salon-win' ); ?></a></li>
@@ -176,12 +176,12 @@ $year          = date( 'Y' );
                 <a href="<?php echo esc_url( home_url( '/#rezerwacja' ) ); ?>"
                    class="btn btn-gold mt-md"
                    style="display: inline-flex;">
-                    <span><?php esc_html_e( 'Wyślij zapytanie', 'salon-win' ); ?></span>
+                    <span><?php esc_html_e( 'Wyślij zapytanie o pobyt', 'salon-win' ); ?></span>
                 </a>
                 <a href="<?php echo esc_url( $booking_url ); ?>"
                    class="footer-booking-link"
                    <?php if ( $booking_is_ext ) echo 'target="_blank" rel="noopener noreferrer"'; ?>>
-                    <?php esc_html_e( 'Nocleg przez Booking.com', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Sprawdź nocleg przez Booking.com', 'salon-win' ); ?>
                 </a>
             </div>
 

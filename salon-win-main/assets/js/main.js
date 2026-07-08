@@ -121,7 +121,7 @@
       if (!btn) return;
       btn.disabled = loading;
       const span = qs('span', btn);
-      if (span) span.textContent = loading ? 'Wysyłanie...' : 'Wyślij rezerwację';
+      if (span) span.textContent = loading ? 'Wysyłanie...' : 'Wyślij zapytanie';
     };
 
     on(form, 'submit', async (e) => {
@@ -133,7 +133,7 @@
       const date  = qs('#booking-date',  form).value;
 
       if (!name || !email || !date) {
-        showFeedback('Wypełnij wymagane pola: imię, e-mail i datę.', true);
+        showFeedback('Uzupełnij imię, e-mail i preferowaną datę pobytu lub wydarzenia.', true);
         return;
       }
 
@@ -157,16 +157,16 @@
         const json = await res.json();
 
         if (json.success) {
-          showFeedback(json.data.message || 'Rezerwacja przyjęta. Potwierdzenie wysłane na e-mail.');
+          showFeedback(json.data.message || 'Dziękujemy za zapytanie. Odpowiemy z informacją o dostępności.');
           form.reset();
           if (dateInput) dateInput.min = new Date(Date.now() + 86400000).toISOString().split('T')[0];
           // Scroll to feedback
           feedback && feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
-          showFeedback(json.data.message || 'Wystąpił błąd. Spróbuj ponownie.', true);
+          showFeedback(json.data.message || 'Nie udało się wysłać zapytania. Spróbuj ponownie.', true);
         }
       } catch (err) {
-        showFeedback('Problem z połączeniem. Zadzwoń do nas bezpośrednio.', true);
+        showFeedback('Problem z połączeniem. Zadzwoń do nas bezpośrednio, a spokojnie ustalimy szczegóły.', true);
         console.error('[SalonWin] Booking error:', err);
       } finally {
         setLoading(false);
@@ -212,15 +212,15 @@
         const json = await res.json();
 
         if (json.success) {
-          showFeedback(json.data.message || 'Dziękujemy za zapis!');
+          showFeedback(json.data.message || 'Dziękujemy za zapis. Będziemy pisać tylko wtedy, gdy mamy coś wartego uwagi.');
           form.reset();
         } else {
-          showFeedback(json.data.message || 'Wystąpił błąd. Spróbuj ponownie.', true);
+          showFeedback(json.data.message || 'Nie udało się zapisać adresu. Spróbuj ponownie.', true);
         }
       } catch {
-        showFeedback('Problem z połączeniem. Spróbuj ponownie.', true);
+        showFeedback('Problem z połączeniem. Spróbuj ponownie za chwilę.', true);
       } finally {
-        if (btn) { btn.disabled = false; btn.textContent = 'Zapisuję się'; }
+        if (btn) { btn.disabled = false; btn.textContent = 'Zapisz się'; }
       }
     });
   };
@@ -541,8 +541,8 @@
 
     notice.innerHTML = `
       <p style="flex:1; min-width:200px; margin:0;">
-        Używamy plików cookie, aby zapewnić najlepsze doświadczenie na naszej stronie.
-        <a href="/cookies" style="color:var(--color-gold); text-decoration:underline;">Dowiedz się więcej</a>
+        Używamy plików cookie, aby strona działała wygodnie i pomagała planować pobyt w Salon Win.
+        <a href="/cookies" style="color:var(--color-gold); text-decoration:underline;">Przeczytaj o cookies</a>
       </p>
       <div style="display:flex; gap:0.5rem; flex-shrink:0;">
         <button id="sw-cookie-reject"

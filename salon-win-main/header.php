@@ -40,14 +40,14 @@ if ( ! class_exists( 'Salon_Win_Nav_Walker' ) ) {
 
 <!-- Mobile Navigation Overlay -->
 <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="<?php esc_attr_e( 'Menu mobilne', 'salon-win' ); ?>">
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Strona Główna', 'salon-win' ); ?></a>
-    <a href="<?php echo esc_url( home_url( '/#pobyt' ) ); ?>"><?php esc_html_e( 'Noclegi', 'salon-win' ); ?></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Strona główna', 'salon-win' ); ?></a>
+    <a href="<?php echo esc_url( home_url( '/#pobyt' ) ); ?>"><?php esc_html_e( 'Apartamenty', 'salon-win' ); ?></a>
     <a href="<?php echo esc_url( home_url( '/degustacje' ) ); ?>"><?php esc_html_e( 'Wydarzenia', 'salon-win' ); ?></a>
-    <a href="<?php echo esc_url( home_url( '/#okolica' ) ); ?>"><?php esc_html_e( 'Wellbeing', 'salon-win' ); ?></a>
-    <a href="<?php echo esc_url( home_url( '/#galeria' ) ); ?>"><?php esc_html_e( 'Galeria', 'salon-win' ); ?></a>
+    <a href="<?php echo esc_url( home_url( '/#okolica' ) ); ?>"><?php esc_html_e( 'Region i slow', 'salon-win' ); ?></a>
+    <a href="<?php echo esc_url( home_url( '/#galeria' ) ); ?>"><?php esc_html_e( 'Sztuka', 'salon-win' ); ?></a>
     <a href="<?php echo esc_url( home_url( '/#kontakt' ) ); ?>"><?php esc_html_e( 'Kontakt', 'salon-win' ); ?></a>
 
-    <a href="<?php echo esc_url( home_url( '/#rezerwacja' ) ); ?>" class="text-gold"><?php esc_html_e( 'Rezerwacja', 'salon-win' ); ?></a>
+    <a href="<?php echo esc_url( home_url( '/#rezerwacja' ) ); ?>" class="text-gold"><?php esc_html_e( 'Zapytaj o pobyt', 'salon-win' ); ?></a>
 </nav>
 
 <!-- Site Header -->
@@ -88,7 +88,7 @@ if ( ! class_exists( 'Salon_Win_Nav_Walker' ) ) {
 
                 <a href="<?php echo esc_url( home_url( '/#rezerwacja' ) ); ?>"
                    class="btn btn-gold">
-                    <span><?php esc_html_e( 'Rezerwacja', 'salon-win' ); ?></span>
+                    <span><?php esc_html_e( 'Zapytaj o pobyt', 'salon-win' ); ?></span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
@@ -112,11 +112,11 @@ if ( ! class_exists( 'Salon_Win_Nav_Walker' ) ) {
  */
 function salon_win_fallback_menu() {
     ?>
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Strona Główna', 'salon-win' ); ?></a>
-    <a href="<?php echo esc_url( home_url( '/#pobyt' ) ); ?>"><?php esc_html_e( 'Noclegi', 'salon-win' ); ?></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Strona główna', 'salon-win' ); ?></a>
+    <a href="<?php echo esc_url( home_url( '/#pobyt' ) ); ?>"><?php esc_html_e( 'Apartamenty', 'salon-win' ); ?></a>
     <a href="<?php echo esc_url( home_url( '/degustacje' ) ); ?>"><?php esc_html_e( 'Wydarzenia', 'salon-win' ); ?></a>
-    <a href="<?php echo esc_url( home_url( '/#okolica' ) ); ?>"><?php esc_html_e( 'Wellbeing', 'salon-win' ); ?></a>
-    <a href="<?php echo esc_url( home_url( '/#galeria' ) ); ?>"><?php esc_html_e( 'Galeria', 'salon-win' ); ?></a>
+    <a href="<?php echo esc_url( home_url( '/#okolica' ) ); ?>"><?php esc_html_e( 'Region i slow', 'salon-win' ); ?></a>
+    <a href="<?php echo esc_url( home_url( '/#galeria' ) ); ?>"><?php esc_html_e( 'Sztuka', 'salon-win' ); ?></a>
     <a href="<?php echo esc_url( home_url( '/#kontakt' ) ); ?>"><?php esc_html_e( 'Kontakt', 'salon-win' ); ?></a>
     <?php
 }

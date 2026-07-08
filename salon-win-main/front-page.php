@@ -15,7 +15,7 @@ $address       = get_option( 'sw_address',      'ul. Wyspiańskiego 16' );
 $postal_code   = get_option( 'sw_postal_code',  '38-200' );
 $city          = get_option( 'sw_city',         'Jasło' );
 $restaurant_hours = salon_win_restaurant_hours();
-$hotel_day     = get_option( 'sw_hotel_day',    '14:00–11:00' );
+$hotel_day     = get_option( 'sw_hotel_day',    '14:00-11:00' );
 $full_address  = $address . ', ' . $postal_code . ' ' . $city;
 $maps_url      = 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( $full_address );
 $maps_fallback = 'https://www.google.com/maps?q=' . rawurlencode( $full_address ) . '&output=embed';
@@ -38,26 +38,26 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
         <div class="container">
             <div class="hero-eyebrow fade-up">
                 <span class="line" aria-hidden="true"></span>
-                <span class="eyebrow"><?php esc_html_e( 'Jasło — noclegi, eventy i wellbeing', 'salon-win' ); ?></span>
+                <span class="eyebrow"><?php esc_html_e( 'Salon Win Jasło - apartamenty, ogród, sztuka i wino', 'salon-win' ); ?></span>
             </div>
 
             <h1 id="hero-headline" class="display-xl hero-headline fade-up delay-1">
-                <?php esc_html_e( 'Pobyt', 'salon-win' ); ?><br>
-                <em><?php esc_html_e( 'dla pracy', 'salon-win' ); ?></em><br>
-                <?php esc_html_e( 'i odpoczynku', 'salon-win' ); ?>
+                <?php esc_html_e( 'Kameralne', 'salon-win' ); ?><br>
+                <em><?php esc_html_e( 'apartamenty', 'salon-win' ); ?></em><br>
+                <?php esc_html_e( 'w Jaśle', 'salon-win' ); ?>
             </h1>
 
             <p class="hero-sub fade-up delay-2">
-                <?php esc_html_e( 'Kameralny obiekt pobytowy dla gości biznesowych i wypoczynkowych: noclegi, restauracja, warsztaty, szkolenia, przyjęcia, sesje foto, galeria sztuki i spokojne formaty wellness. Wino zostaje jako sezonowy atut, nie jedyna oś marki.', 'salon-win' ); ?>
+                <?php esc_html_e( 'Salon Win to miejsce dla tych, którzy szukają czegoś więcej niż noclegu. W centrum Jasła łączymy kameralne apartamenty, ogród, prywatną galerię sztuki, degustacje win i spokojną atmosferę pobytu w rytmie slow.', 'salon-win' ); ?>
             </p>
 
             <div class="hero-actions fade-up delay-3">
                 <a href="#rezerwacja" class="btn btn-primary">
-                    <span><?php esc_html_e( 'Zarezerwuj pobyt lub przestrzeń', 'salon-win' ); ?></span>
+                    <span><?php esc_html_e( 'Zapytaj o pobyt w Salon Win', 'salon-win' ); ?></span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
                 <a href="#pobyt" class="btn btn-outline">
-                    <span><?php esc_html_e( 'Zobacz ofertę', 'salon-win' ); ?></span>
+                    <span><?php esc_html_e( 'Zobacz apartamenty i doświadczenia', 'salon-win' ); ?></span>
                 </a>
             </div>
         </div>
@@ -79,12 +79,12 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                 <div class="ribbon-divider" aria-hidden="true"></div>
                 <div class="ribbon-stat fade-up delay-3">
                     <span class="stat-number">120</span>
-                    <span class="stat-label"><?php esc_html_e( 'Gości na event', 'salon-win' ); ?></span>
+                    <span class="stat-label"><?php esc_html_e( 'Gości na wydarzenie', 'salon-win' ); ?></span>
                 </div>
                 <div class="ribbon-divider" aria-hidden="true"></div>
                 <div class="ribbon-stat fade-up delay-4">
                     <span class="stat-number">2+</span>
-                    <span class="stat-label"><?php esc_html_e( 'Dni pobytu', 'salon-win' ); ?></span>
+                    <span class="stat-label"><?php esc_html_e( 'Dni spokojnego pobytu', 'salon-win' ); ?></span>
                 </div>
             </div>
         </div>
@@ -106,22 +106,22 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
         <div class="booking-grid">
 
             <div class="booking-copy fade-left">
-                <span class="eyebrow"><?php esc_html_e( 'Własny system rezerwacyjny', 'salon-win' ); ?></span>
+                <span class="eyebrow"><?php esc_html_e( 'Rezerwacja i zapytania', 'salon-win' ); ?></span>
                 <h2 id="booking-heading" class="display-md" style="color: var(--color-cream); margin-top: 0.5rem;">
-                    <?php esc_html_e( 'Zarezerwuj nocleg, pobyt albo wydarzenie', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Zarezerwuj nocleg, pobyt albo kameralne wydarzenie', 'salon-win' ); ?>
                 </h2>
                 <p>
-                    <?php esc_html_e( 'Wyślij zapytanie bezpośrednio do zespołu. Rezerwacje zapisują się w panelu WordPressa, a gość otrzymuje potwierdzenie e-mail. Obsługujemy noclegi biznesowe, pobyty wypoczynkowe, warsztaty, szkolenia, imprezy zamknięte, eventy gastro, sesje foto, wellbeing i działania artystyczne.', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Napisz do nas bezpośrednio, jeśli planujesz nocleg w Jaśle, spokojny weekend, warsztat, degustację wina, spotkanie firmowe albo prywatne wydarzenie. Wrócimy z potwierdzeniem dostępności i propozycją dopasowaną do charakteru pobytu.', 'salon-win' ); ?>
                 </p>
 
                 <ul class="booking-features" aria-label="<?php esc_attr_e( 'Możliwości rezerwacji', 'salon-win' ); ?>">
                     <?php
                     $features = [
-                        __( 'Noclegi biznesowe dla delegacji, kontrahentów i małych zespołów', 'salon-win' ),
-                        __( 'Pobyty wypoczynkowe, wellbeing i spokojne weekendy regeneracyjne', 'salon-win' ),
-                        __( 'Warsztaty, szkolenia, prezentacje, kręgi kobiet i warsztaty rozwojowe', 'salon-win' ),
-                        __( 'Komunie, wesela, jubileusze, imprezy firmowe, świąteczne i bankiety', 'salon-win' ),
-                        __( 'Dni Wina, warsztaty winiarskie oraz pakiety pobytowe 2+1 i 4+2', 'salon-win' ),
+                        __( 'Kameralne apartamenty w Jaśle dla gości prywatnych i biznesowych', 'salon-win' ),
+                        __( 'Pobyty wypoczynkowe, wellbeing i weekendy w rytmie slow', 'salon-win' ),
+                        __( 'Warsztaty, szkolenia, prezentacje i spotkania rozwojowe', 'salon-win' ),
+                        __( 'Kameralne przyjęcia, jubileusze, spotkania firmowe i wieczory panieńskie', 'salon-win' ),
+                        __( 'Degustacje win, Dni Wina i pobyty inspirowane regionem jasielskim', 'salon-win' ),
                     ];
                     foreach ( $features as $feat ) :
                     ?>
@@ -135,10 +135,10 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                 <div class="booking-paths" aria-label="<?php esc_attr_e( 'Najczęstsze scenariusze rezerwacji', 'salon-win' ); ?>">
                     <?php
                     $booking_paths = [
-                        [ 'icon' => 'fa-briefcase',       'title' => __( 'Nocleg B2B', 'salon-win' ),   'text' => __( 'Delegacje, kontrahenci, szkolenia i spokojna praca.', 'salon-win' ) ],
-                        [ 'icon' => 'fa-spa',             'title' => __( 'Wellbeing', 'salon-win' ),    'text' => __( 'Pobyty regeneracyjne, kręgi i warsztaty rozwojowe.', 'salon-win' ) ],
-                        [ 'icon' => 'fa-utensils',        'title' => __( 'Event gastro', 'salon-win' ), 'text' => __( 'Komunie, wesela, jubileusze, bankiety i przyjęcia.', 'salon-win' ) ],
-                        [ 'icon' => 'fa-camera-retro',    'title' => __( 'Foto i sztuka', 'salon-win' ),'text' => __( 'Sesje, wernisaże, galeria i kameralne spotkania.', 'salon-win' ) ],
+                        [ 'icon' => 'fa-briefcase',       'title' => __( 'Nocleg w Jaśle', 'salon-win' ), 'text' => __( 'Apartamenty dla delegacji, par i gości odkrywających region jasielski.', 'salon-win' ) ],
+                        [ 'icon' => 'fa-spa',             'title' => __( 'Wellbeing', 'salon-win' ),      'text' => __( 'Spokojne pobyty, warsztaty i odpoczynek bez nadmiaru bodźców.', 'salon-win' ) ],
+                        [ 'icon' => 'fa-utensils',        'title' => __( 'Wydarzenie', 'salon-win' ),     'text' => __( 'Kameralne przyjęcia, degustacje, spotkania firmowe i rodzinne.', 'salon-win' ) ],
+                        [ 'icon' => 'fa-camera-retro',    'title' => __( 'Sztuka i foto', 'salon-win' ),  'text' => __( 'Sesje, wernisaże i spotkania w przestrzeni z charakterem.', 'salon-win' ) ],
                     ];
                     foreach ( $booking_paths as $item ) :
                     ?>
@@ -162,12 +162,12 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
 
                 <div class="booking-external">
                     <div>
-                        <span class="booking-external-label"><?php esc_html_e( 'Alternatywa dla noclegu', 'salon-win' ); ?></span>
-                        <strong><?php esc_html_e( 'Booking.com zostaje jako szybka ścieżka hotelowa dla noclegów', 'salon-win' ); ?></strong>
+                        <span class="booking-external-label"><?php esc_html_e( 'Szybka rezerwacja noclegu', 'salon-win' ); ?></span>
+                        <strong><?php esc_html_e( 'Apartamenty Salon Win możesz sprawdzić także przez Booking.com', 'salon-win' ); ?></strong>
                     </div>
                     <a href="<?php echo esc_url( $booking_url ); ?>"
                        <?php if ( $booking_is_external ) echo 'target="_blank" rel="noopener noreferrer"'; ?>>
-                        <?php esc_html_e( 'Otwórz Booking.com', 'salon-win' ); ?>
+                        <?php esc_html_e( 'Sprawdź nocleg na Booking.com', 'salon-win' ); ?>
                     </a>
                 </div>
             </div>
@@ -178,7 +178,7 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                     <?php esc_html_e( 'Opowiedz nam, czego potrzebujesz', 'salon-win' ); ?>
                 </h3>
                 <p class="booking-form-lead">
-                    <?php esc_html_e( 'Po wysłaniu formularza zgłoszenie trafia do panelu WordPressa i na skrzynkę administratora. Potwierdzimy dostępność lub zaproponujemy najlepszy wariant pobytu.', 'salon-win' ); ?>
+                    <?php esc_html_e( 'W kilku zdaniach opisz termin, liczbę osób i charakter pobytu. Odpowiemy z informacją o dostępności oraz spokojnie dopracujemy szczegóły.', 'salon-win' ); ?>
                 </p>
 
                 <form id="booking-form" class="booking-form" novalidate>
@@ -235,11 +235,11 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
 
                     <div class="form-group">
                         <label for="booking-message"><?php esc_html_e( 'Wiadomość', 'salon-win' ); ?></label>
-                        <textarea id="booking-message" name="message" placeholder="<?php esc_attr_e( 'Napisz, czy chodzi o noclegi biznesowe, wypoczynek, warsztaty, szkolenie, krąg kobiet, komunię, wesele, bankiet, sesję foto, galerię sztuki albo pakiet na Dni Wina.', 'salon-win' ); ?>"></textarea>
+                        <textarea id="booking-message" name="message" placeholder="<?php esc_attr_e( 'Napisz, czy chodzi o apartamenty w Jaśle, wypoczynek, warsztaty, degustację, spotkanie firmowe, wieczór panieński, sesję foto albo kameralne wydarzenie.', 'salon-win' ); ?>"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary booking-submit">
-                        <span><?php esc_html_e( 'Wyślij rezerwację', 'salon-win' ); ?></span>
+                        <span><?php esc_html_e( 'Wyślij zapytanie', 'salon-win' ); ?></span>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
 
@@ -265,7 +265,7 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
             <!-- Image -->
             <div class="about-image-wrap fade-left">
                 <img src="<?php echo esc_url( salon_win_get_image_url( 'sw_image_about_salon', 'about-salon.jpg' ) ); ?>"
-                     alt="<?php esc_attr_e( 'Wnętrze Salon Win', 'salon-win' ); ?>"
+                     alt="<?php esc_attr_e( 'Butikowe wnętrze Salon Win w Jaśle', 'salon-win' ); ?>"
                      class="img-primary"
                      loading="lazy">
 
@@ -275,31 +275,31 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                 </div>
 
                 <img src="<?php echo esc_url( salon_win_get_image_url( 'sw_image_about_wine', 'about-wine.jpg' ) ); ?>"
-                     alt="<?php esc_attr_e( 'Detal butikowej restauracji i przestrzeni spotkań', 'salon-win' ); ?>"
+                     alt="<?php esc_attr_e( 'Detal przestrzeni spotkań, wina i sztuki w Salon Win', 'salon-win' ); ?>"
                      class="img-accent"
                      loading="lazy">
             </div>
 
             <!-- Copy -->
             <div class="about-copy fade-up delay-1">
-                <span class="eyebrow"><?php esc_html_e( 'Nowe pozycjonowanie', 'salon-win' ); ?></span>
+                <span class="eyebrow"><?php esc_html_e( 'O miejscu', 'salon-win' ); ?></span>
                 <h2 id="about-heading" class="display-md" style="margin-top: 0.5rem; margin-bottom: var(--space-md);">
-                    <?php esc_html_e( 'Od salonu winiarskiego do miejsca pobytu i spotkań', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Pobyt, który nie kończy się na noclegu', 'salon-win' ); ?>
                 </h2>
                 <p>
-                    <?php esc_html_e( 'Miejsce wyrasta z kultury wina, ale rozwija się szerzej: jako baza noclegów biznesowych, pobytów wypoczynkowych, eventów gastro, warsztatów, spotkań rozwojowych, sesji foto i działań artystycznych.', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Salon Win wyrósł z kultury wina, ale dziś opowiada szerzej o spokojnym pobycie w Jaśle. To kameralne apartamenty, restauracyjna gościnność, ogród, sztuka i przestrzeń do spotkań, które potrzebują jakości zamiast pośpiechu.', 'salon-win' ); ?>
                 </p>
                 <p>
-                    <?php esc_html_e( 'Wino pozostaje mocnym elementem sezonowym, szczególnie podczas Dni Wina i warsztatów winiarskich, ale docelowo komunikacja kieruje gości przede wszystkim do pobytu, przestrzeni, odpoczynku i wydarzeń.', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Można tu zatrzymać się na nocleg, przyjechać na weekend w Beskidzie Niskim, zorganizować warsztat albo spotkać się przy winie. Najważniejsza pozostaje atmosfera: osobista, uważna i dopracowana.', 'salon-win' ); ?>
                 </p>
 
                 <div class="about-highlights">
                     <?php
                     $highlights = [
-                        [ 'title' => 'B2B',  'label' => __( 'Noclegi biznesowe', 'salon-win' ) ],
-                        [ 'title' => 'Gastro','label' => __( 'Eventy i bankiety', 'salon-win' ) ],
-                        [ 'title' => 'Slow', 'label' => __( 'Wellbeing i wypoczynek', 'salon-win' ) ],
-                        [ 'title' => 'Art',  'label' => __( 'Galeria i sesje foto', 'salon-win' ) ],
+                        [ 'title' => 'Stay', 'label' => __( 'Apartamenty w Jaśle', 'salon-win' ) ],
+                        [ 'title' => 'Meet', 'label' => __( 'Kameralne wydarzenia', 'salon-win' ) ],
+                        [ 'title' => 'Slow', 'label' => __( 'Wellbeing i odpoczynek', 'salon-win' ) ],
+                        [ 'title' => 'Art',  'label' => __( 'Sztuka i degustacje', 'salon-win' ) ],
                     ];
                     foreach ( $highlights as $item ) :
                     ?>
@@ -311,7 +311,7 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                 </div>
 
                 <a href="<?php echo esc_url( home_url( '/o-nas' ) ); ?>" class="btn btn-ghost">
-                    <span><?php esc_html_e( 'Poznaj przestrzeń', 'salon-win' ); ?></span>
+                    <span><?php esc_html_e( 'Poznaj przestrzeń Salon Win', 'salon-win' ); ?></span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
             </div>
@@ -328,13 +328,13 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
     <div class="container">
         <div class="section-header experience-header">
             <div class="fade-up">
-                <span class="eyebrow"><?php esc_html_e( 'Noclegi, eventy i doświadczenia', 'salon-win' ); ?></span>
+                <span class="eyebrow"><?php esc_html_e( 'Apartamenty, spotkania i doświadczenia', 'salon-win' ); ?></span>
                 <h2 id="experience-heading" class="display-md" style="margin-top: 0.5rem;">
-                    <?php esc_html_e( 'Nowy kierunek: pobyty, przestrzeń i wellbeing', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Kameralny pobyt w Jaśle, blisko Beskidu Niskiego', 'salon-win' ); ?>
                 </h2>
             </div>
             <p class="section-lead fade-up delay-1">
-                <?php esc_html_e( 'Oferta odchodzi od samego wina w stronę miejsca pobytu i spotkań: dla firm, rodzin, twórców, grup warsztatowych oraz osób szukających odpoczynku.', 'salon-win' ); ?>
+                <?php esc_html_e( 'W Salon Win nocleg może stać się częścią większego doświadczenia: spokojnego weekendu, degustacji, warsztatu, spotkania firmowego albo podróży po regionie jasielskim.', 'salon-win' ); ?>
             </p>
         </div>
 
@@ -343,39 +343,39 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
             $experiences = [
                 [
                     'icon'  => 'fa-briefcase',
-                    'label' => __( 'Noclegi biznesowe', 'salon-win' ),
-                    'title' => __( 'Delegacje i kontrahenci', 'salon-win' ),
-                    'text'  => __( 'Spokojny nocleg, kolacja, śniadanie i miejsce do rozmowy dla gości biznesowych, małych zespołów oraz partnerów zagranicznych.', 'salon-win' ),
+                    'label' => __( 'Apartamenty Jasło', 'salon-win' ),
+                    'title' => __( 'Kameralny nocleg w centrum Jasła', 'salon-win' ),
+                    'text'  => __( 'Apartamenty z charakterem dla gości biznesowych, par i osób, które chcą spokojnie odkrywać region jasielski oraz Beskid Niski.', 'salon-win' ),
                 ],
                 [
                     'icon'  => 'fa-spa',
                     'label' => __( 'Wypoczynek', 'salon-win' ),
-                    'title' => __( 'Wellness i wellbeing', 'salon-win' ),
-                    'text'  => __( 'Pobyty regeneracyjne, weekendy slow, warsztaty oddechowe, kręgi kobiet i formaty rozwojowe w kameralnej przestrzeni.', 'salon-win' ),
+                    'title' => __( 'Odpoczynek bez pośpiechu', 'salon-win' ),
+                    'text'  => __( 'Pobyty regeneracyjne, weekendy slow, warsztaty oddechowe i formaty rozwojowe prowadzone w spokojnej, estetycznej przestrzeni.', 'salon-win' ),
                 ],
                 [
                     'icon'  => 'fa-chalkboard-user',
                     'label' => __( 'Przestrzeń', 'salon-win' ),
                     'title' => __( 'Warsztaty i szkolenia', 'salon-win' ),
-                    'text'  => __( 'Miejsce na prezentacje, szkolenia, warsztaty rozwojowe, spotkania zamknięte, premiery produktów i kameralne konferencje.', 'salon-win' ),
+                    'text'  => __( 'Sala na warsztaty w Jaśle, szkolenia, prezentacje, spotkania zamknięte i kameralne konferencje, które potrzebują skupienia.', 'salon-win' ),
                 ],
                 [
                     'icon'  => 'fa-utensils',
-                    'label' => __( 'Eventy gastro', 'salon-win' ),
-                    'title' => __( 'Przyjęcia i bankiety', 'salon-win' ),
-                    'text'  => __( 'Komunie, przyjęcia weselne, jubileusze, imprezy firmowe, świąteczne, spotkania dla kontrahentów i ekskluzywne bankiety.', 'salon-win' ),
+                    'label' => __( 'Kameralne wydarzenia', 'salon-win' ),
+                    'title' => __( 'Przyjęcia i spotkania z charakterem', 'salon-win' ),
+                    'text'  => __( 'Jubileusze, wieczory panieńskie, spotkania firmowe, degustacje i niewielkie wydarzenia prywatne w atmosferze rozmowy i dobrego stołu.', 'salon-win' ),
                 ],
                 [
                     'icon'  => 'fa-wine-glass-alt',
                     'label' => __( 'Dni Wina', 'salon-win' ),
-                    'title' => __( 'Warsztaty i pakiety 2+1', 'salon-win' ),
-                    'text'  => __( 'Wino zostaje jako sezonowy magnes: warsztaty winiarskie, sprzedaż butelek dla przyjezdnych oraz pakiety pobytowe 2+1 i 4+2.', 'salon-win' ),
+                    'title' => __( 'Degustacje win w Jaśle', 'salon-win' ),
+                    'text'  => __( 'Wino jest pretekstem do rozmowy: kameralne degustacje, warsztaty winiarskie i spotkania inspirowane winnicami regionu jasielskiego.', 'salon-win' ),
                 ],
                 [
                     'icon'  => 'fa-camera-retro',
-                    'label' => __( 'Foto i sztuka', 'salon-win' ),
-                    'title' => __( 'Sesje, galeria, wernisaże', 'salon-win' ),
-                    'text'  => __( 'Wnętrza jako tło sesji zdjęciowych, kameralna galeria sztuki, wystawy lokalnych twórców i spotkania z publicznością.', 'salon-win' ),
+                    'label' => __( 'Sztuka', 'salon-win' ),
+                    'title' => __( 'Nocleg ze sztuką', 'salon-win' ),
+                    'text'  => __( 'Prywatna galeria sztuki, wnętrza z charakterem, wernisaże i sesje zdjęciowe, w których miejsce staje się częścią opowieści.', 'salon-win' ),
                 ],
             ];
 
@@ -387,7 +387,7 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                 <h3><?php echo esc_html( $item['title'] ); ?></h3>
                 <p><?php echo esc_html( $item['text'] ); ?></p>
                 <a href="#rezerwacja" class="experience-link">
-                    <?php esc_html_e( 'Zapytaj o termin', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Zapytaj o tę możliwość', 'salon-win' ); ?>
                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
             </article>
@@ -405,16 +405,16 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
 
         <div class="section-header flex-between" style="flex-wrap: wrap; gap: var(--space-md); margin-bottom: var(--space-lg);">
             <div class="fade-up">
-                <span class="eyebrow"><?php esc_html_e( 'Nadchodzące wydarzenia', 'salon-win' ); ?></span>
+                <span class="eyebrow"><?php esc_html_e( 'Wydarzenia kameralne w Jaśle', 'salon-win' ); ?></span>
                 <h2 id="events-heading" class="display-md" style="margin-top: 0.5rem;">
-                    <?php esc_html_e( 'Warsztaty, wellbeing, gastro eventy i Dni Wina', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Warsztaty, degustacje, spotkania i Dni Wina', 'salon-win' ); ?>
                 </h2>
                 <p class="section-lead">
-                    <?php esc_html_e( 'Kalendarz ma sprzedawać konkretne powody przyjazdu: szkolenie, warsztat, krąg kobiet, przyjęcie rodzinne, sesję foto, wernisaż albo pobyt z ofertą specjalną podczas Dni Wina.', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Nie każde wydarzenie potrzebuje dużej sali. W Salon Win lepiej odnajdują się spotkania, w których liczy się atmosfera, rozmowa, ogród, dobre jedzenie, sztuka i spokojny rytm.', 'salon-win' ); ?>
                 </p>
             </div>
             <a href="<?php echo esc_url( home_url( '/degustacje' ) ); ?>" class="btn btn-ghost fade-up delay-1">
-                <span><?php esc_html_e( 'Wszystkie wydarzenia', 'salon-win' ); ?></span>
+                <span><?php esc_html_e( 'Poznaj wydarzenia Salon Win', 'salon-win' ); ?></span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
         </div>
@@ -465,7 +465,7 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                     <a href="<?php echo esc_url( $btn_url ); ?>"
                        class="btn btn-primary"
                        <?php if ( $btn_external ) echo 'target="_blank" rel="noopener noreferrer"'; ?>>
-                        <span><?php esc_html_e( 'Rezerwuj', 'salon-win' ); ?></span>
+                        <span><?php esc_html_e( 'Zapytaj o udział', 'salon-win' ); ?></span>
                     </a>
                 </div>
 
@@ -478,11 +478,11 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
         <div class="events-list">
             <?php
             $sample_events = [
-                [ 'day' => '18', 'month' => 'Lip', 'type' => __( 'Dni Wina', 'salon-win' ),     'title' => __( 'Warsztat winiarski + pakiet pobytowy 2+1 dla przyjezdnych', 'salon-win' ), 'time' => '17:00', 'price' => '390', 'spots' => 16 ],
-                [ 'day' => '25', 'month' => 'Lip', 'type' => __( 'Business', 'salon-win' ),     'title' => __( 'Sleep & Meet: nocleg biznesowy, kolacja i poranne szkolenie', 'salon-win' ), 'time' => '18:00', 'price' => '520', 'spots' => 14 ],
-                [ 'day' => '01', 'month' => 'Sie', 'type' => __( 'Wellbeing', 'salon-win' ),    'title' => __( 'Krąg kobiet i weekend regeneracyjny z kolacją sezonową', 'salon-win' ), 'time' => '15:00', 'price' => '640', 'spots' => 12 ],
-                [ 'day' => '08', 'month' => 'Sie', 'type' => __( 'Gastro event', 'salon-win' ), 'title' => __( 'Dzień konsultacji: komunie, jubileusze, wesela i bankiety', 'salon-win' ), 'time' => '12:00', 'price' => '0', 'spots' => 8 ],
-                [ 'day' => '15', 'month' => 'Sie', 'type' => __( 'Foto i sztuka', 'salon-win' ),'title' => __( 'Sesja w butikowych wnętrzach + kameralny wernisaż', 'salon-win' ), 'time' => '16:00', 'price' => '280', 'spots' => 10 ],
+                [ 'day' => '18', 'month' => 'Lip', 'type' => __( 'Dni Wina', 'salon-win' ),     'title' => __( 'Kameralny warsztat degustacji win i pobyt w Jaśle', 'salon-win' ), 'time' => '17:00', 'price' => '390', 'spots' => 16 ],
+                [ 'day' => '25', 'month' => 'Lip', 'type' => __( 'Biznes', 'salon-win' ),       'title' => __( 'Spotkanie firmowe z noclegiem, kolacją i poranną pracą', 'salon-win' ), 'time' => '18:00', 'price' => '520', 'spots' => 14 ],
+                [ 'day' => '01', 'month' => 'Sie', 'type' => __( 'Wellbeing', 'salon-win' ),    'title' => __( 'Weekend regeneracyjny: warsztat, cisza i sezonowa kolacja', 'salon-win' ), 'time' => '15:00', 'price' => '640', 'spots' => 12 ],
+                [ 'day' => '08', 'month' => 'Sie', 'type' => __( 'Spotkania', 'salon-win' ),    'title' => __( 'Dzień rozmów o kameralnych przyjęciach i wydarzeniach', 'salon-win' ), 'time' => '12:00', 'price' => '0', 'spots' => 8 ],
+                [ 'day' => '15', 'month' => 'Sie', 'type' => __( 'Sztuka', 'salon-win' ),       'title' => __( 'Sesja w butikowych wnętrzach i spotkanie z galerią sztuki', 'salon-win' ), 'time' => '16:00', 'price' => '280', 'spots' => 10 ],
             ];
             foreach ( $sample_events as $ev ) :
             ?>
@@ -502,7 +502,7 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                     </span>
                     <span class="event-spots"><?php echo sprintf( esc_html__( '%d miejsc', 'salon-win' ), $ev['spots'] ); ?></span>
                     <a href="#rezerwacja" class="btn btn-primary">
-                        <span><?php esc_html_e( 'Rezerwuj', 'salon-win' ); ?></span>
+                        <span><?php esc_html_e( 'Zapytaj o udział', 'salon-win' ); ?></span>
                     </a>
                 </div>
             </div>
@@ -521,20 +521,20 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
     <div class="container">
         <div class="attractions-layout">
             <div class="attractions-intro fade-left">
-                <span class="eyebrow"><?php esc_html_e( 'Pobyt 2-3 dni', 'salon-win' ); ?></span>
+                <span class="eyebrow"><?php esc_html_e( 'Jasło i region jasielski', 'salon-win' ); ?></span>
                 <h2 id="attractions-heading" class="display-md" style="margin-top: 0.5rem;">
-                    <?php esc_html_e( 'Przyjazd, który ma program', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Pobyt, który ma spokojny rytm', 'salon-win' ); ?>
                 </h2>
                 <p>
-                    <?php esc_html_e( 'Nocleg ma być początkiem pobytu, nie tylko miejscem do spania. Goście mogą połączyć pracę, odpoczynek, warsztaty, wellness, sztukę, lokalne atrakcje i sezonowe wydarzenia.', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Jasło jest dobrym punktem wyjścia do odkrywania Beskidu Niskiego, winnic regionu jasielskiego, Magurskiego Parku Narodowego, drewnianych kościołów i spokojnych tras bez tłumu.', 'salon-win' ); ?>
                 </p>
 
                 <div class="itinerary-panel" aria-label="<?php esc_attr_e( 'Przykładowy plan pobytu', 'salon-win' ); ?>">
                     <?php
                     $itinerary = [
-                        [ 'day' => __( 'Dzień 1', 'salon-win' ), 'text' => __( 'Przyjazd, meldunek, kolacja, odpoczynek po podróży albo zamknięte spotkanie biznesowe.', 'salon-win' ) ],
-                        [ 'day' => __( 'Dzień 2', 'salon-win' ), 'text' => __( 'Warsztat, szkolenie, krąg kobiet, sesja foto, wellbeing albo krótki wyjazd po okolicy.', 'salon-win' ) ],
-                        [ 'day' => __( 'Dzień 3', 'salon-win' ), 'text' => __( 'Śniadanie, spokojny wyjazd, zakup upominków lub butelek podczas Dni Wina i powrót.', 'salon-win' ) ],
+                        [ 'day' => __( 'Dzień 1', 'salon-win' ), 'text' => __( 'Przyjazd do Jaśla, meldunek, kolacja i pierwszy wieczór bez pośpiechu.', 'salon-win' ) ],
+                        [ 'day' => __( 'Dzień 2', 'salon-win' ), 'text' => __( 'Spacer, degustacja, warsztat, kontakt ze sztuką albo wyjazd w stronę Beskidu Niskiego.', 'salon-win' ) ],
+                        [ 'day' => __( 'Dzień 3', 'salon-win' ), 'text' => __( 'Śniadanie, kawa w ogrodzie, spokojny wyjazd i czas na lokalne pamiątki lub wino.', 'salon-win' ) ],
                     ];
                     foreach ( $itinerary as $step ) :
                     ?>
@@ -546,7 +546,7 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                 </div>
 
                 <a href="#rezerwacja" class="btn btn-gold">
-                    <span><?php esc_html_e( 'Ułóżmy program pobytu', 'salon-win' ); ?></span>
+                    <span><?php esc_html_e( 'Zaplanuj pobyt w regionie jasielskim', 'salon-win' ); ?></span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
             </div>
@@ -556,33 +556,33 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                 $attractions = [
                     [
                         'icon'  => 'fa-briefcase',
-                        'title' => __( 'Noclegi biznesowe', 'salon-win' ),
-                        'text'  => __( 'Wygodna baza dla delegacji, spotkań z kontrahentami i małych zespołów, które chcą połączyć pracę z kolacją.', 'salon-win' ),
+                        'title' => __( 'Apartamenty w centrum Jasła', 'salon-win' ),
+                        'text'  => __( 'Kameralna baza dla gości, którzy chcą połączyć nocleg w Jaśle z kolacją, odpoczynkiem i rozmową.', 'salon-win' ),
                     ],
                     [
                         'icon'  => 'fa-spa',
                         'title' => __( 'Wellbeing i regeneracja', 'salon-win' ),
-                        'text'  => __( 'Pobyty slow, warsztaty oddechowe, kręgi kobiet i formaty rozwojowe dla osób szukających ciszy.', 'salon-win' ),
+                        'text'  => __( 'Pobyty slow, warsztaty oddechowe i formaty rozwojowe dla osób, które szukają ciszy oraz digital detox w Podkarpaciu.', 'salon-win' ),
                     ],
                     [
                         'icon'  => 'fa-chalkboard-user',
                         'title' => __( 'Warsztaty i prezentacje', 'salon-win' ),
-                        'text'  => __( 'Przestrzeń do szkoleń, spotkań zamkniętych, prezentacji produktów i warsztatów rozwojowych.', 'salon-win' ),
+                        'text'  => __( 'Przestrzeń do szkoleń, spotkań zamkniętych, prezentacji produktów i warsztatów w Jaśle.', 'salon-win' ),
                     ],
                     [
                         'icon'  => 'fa-wine-bottle',
-                        'title' => __( 'Dni Wina i pakiety', 'salon-win' ),
-                        'text'  => __( 'Warsztaty winiarskie, sprzedaż win dla przyjezdnych oraz oferty pobytowe 2+1 i 4+2 w czasie wydarzeń.', 'salon-win' ),
+                        'title' => __( 'Wino i degustacje', 'salon-win' ),
+                        'text'  => __( 'Degustacje win w Jaśle, warsztaty winiarskie i spotkania inspirowane winnicami podkarpackimi.', 'salon-win' ),
                     ],
                     [
                         'icon'  => 'fa-camera-retro',
                         'title' => __( 'Sesje foto', 'salon-win' ),
-                        'text'  => __( 'Butikowe wnętrza, restauracja i detale miejsca jako tło sesji wizerunkowych, ślubnych i lifestyle.', 'salon-win' ),
+                        'text'  => __( 'Butikowe wnętrza, restauracja, ogród i detale miejsca jako tło sesji wizerunkowych, ślubnych i lifestyle.', 'salon-win' ),
                     ],
                     [
                         'icon'  => 'fa-palette',
                         'title' => __( 'Galeria sztuki', 'salon-win' ),
-                        'text'  => __( 'Kameralne wystawy, wernisaże i spotkania z twórcami jako naturalne przedłużenie pobytu i eventów.', 'salon-win' ),
+                        'text'  => __( 'Kameralne wystawy, wernisaże i spotkania z twórcami jako naturalna część pobytu wśród sztuki.', 'salon-win' ),
                     ],
                 ];
 
@@ -610,10 +610,10 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
             <div class="fade-up">
                 <span class="eyebrow"><?php esc_html_e( 'Opinie gości', 'salon-win' ); ?></span>
                 <h2 id="reviews-heading" class="display-md" style="color: var(--color-cream); margin-top: 0.5rem;">
-                    <?php esc_html_e( 'Co mówią nasi goście', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Jak goście wspominają pobyt', 'salon-win' ); ?>
                 </h2>
                 <p class="section-lead">
-                    <?php esc_html_e( 'Ocena 4.9/5 na podstawie ponad 800 opinii w Google i TripAdvisor.', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Goście najczęściej wracają do spokoju miejsca, jakości obsługi, wnętrz i możliwości połączenia noclegu z dobrym jedzeniem, winem oraz spotkaniem.', 'salon-win' ); ?>
                 </p>
             </div>
         </div>
@@ -657,12 +657,12 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                 else :
                     // Placeholder reviews
                     $sample_reviews = [
-                        [ 'rating' => 5, 'name' => 'Marta W.', 'source' => 'Google', 'quote' => __( 'Przyjechałyśmy na weekend regeneracyjny i dostałyśmy dokładnie to, czego potrzebowałyśmy: spokój, piękne wnętrza, dobrą kolację i świetną opiekę.', 'salon-win' ) ],
-                        [ 'rating' => 5, 'name' => 'Tomasz K.', 'source' => 'TripAdvisor', 'quote' => __( 'Organizowaliśmy spotkanie firmowe dla 30 osób. Noclegi, sala, kolacja i obsługa były dopięte bardzo profesjonalnie.', 'salon-win' ) ],
-                        [ 'rating' => 5, 'name' => 'Agnieszka L.', 'source' => 'Google', 'quote' => __( 'Piękne wnętrze i świetna atmosfera. Mieliśmy kameralny jubileusz rodzinny, a goście zostali na noc bez żadnej logistyki po naszej stronie.', 'salon-win' ) ],
-                        [ 'rating' => 5, 'name' => 'Marcin R.', 'source' => 'Google', 'quote' => __( 'Warsztat rozwojowy w takim miejscu ma zupełnie inną energię. Cisza, jedzenie, komfort i przestrzeń do pracy zrobiły swoje.', 'salon-win' ) ],
-                        [ 'rating' => 5, 'name' => 'Karolina M.', 'source' => 'Booking.com', 'quote' => __( 'Bardzo dobra baza na kilka dni w Jaśle. Połączyliśmy odpoczynek, lokalne atrakcje i wieczorne wydarzenie na miejscu.', 'salon-win' ) ],
-                        [ 'rating' => 5, 'name' => 'Piotr S.', 'source' => 'Google', 'quote' => __( 'Zrobiliśmy sesję wizerunkową i małe spotkanie z klientami. Miejsce wygląda świetnie na zdjęciach i jest bardzo dobrze zorganizowane.', 'salon-win' ) ],
+                        [ 'rating' => 5, 'name' => 'Marta W.', 'source' => 'Google', 'quote' => __( 'Przyjechałyśmy na weekend regeneracyjny i dostałyśmy dokładnie to, czego potrzebowałyśmy: ciszę, piękne wnętrza, dobrą kolację i uważną opiekę.', 'salon-win' ) ],
+                        [ 'rating' => 5, 'name' => 'Tomasz K.', 'source' => 'TripAdvisor', 'quote' => __( 'Organizowaliśmy spotkanie firmowe w kameralnym gronie. Noclegi, kolacja i przestrzeń do rozmowy były przygotowane bardzo profesjonalnie.', 'salon-win' ) ],
+                        [ 'rating' => 5, 'name' => 'Agnieszka L.', 'source' => 'Google', 'quote' => __( 'Piękne wnętrze i spokojna atmosfera. Kameralny jubileusz rodzinny miał dokładnie taki rytm, jakiego szukaliśmy.', 'salon-win' ) ],
+                        [ 'rating' => 5, 'name' => 'Marcin R.', 'source' => 'Google', 'quote' => __( 'Warsztat rozwojowy w takim miejscu ma inną jakość. Cisza, jedzenie, komfort i przestrzeń do skupienia zrobiły swoje.', 'salon-win' ) ],
+                        [ 'rating' => 5, 'name' => 'Karolina M.', 'source' => 'Booking.com', 'quote' => __( 'Bardzo dobra baza na kilka dni w Jaśle. Połączyliśmy odpoczynek, atrakcje regionu jasielskiego i spokojny wieczór na miejscu.', 'salon-win' ) ],
+                        [ 'rating' => 5, 'name' => 'Piotr S.', 'source' => 'Google', 'quote' => __( 'Zrobiliśmy sesję wizerunkową i małe spotkanie z klientami. Wnętrza mają charakter, a całość była dobrze zorganizowana.', 'salon-win' ) ],
                     ];
                     foreach ( $sample_reviews as $rev ) :
                 ?>
@@ -696,7 +696,7 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
             </button>
             <div class="review-platform">
                 <span class="platform-rating">4.9</span>
-                <span><?php esc_html_e( '/ 5 — Google Reviews', 'salon-win' ); ?></span>
+                <span><?php esc_html_e( '/ 5 - opinie gości', 'salon-win' ); ?></span>
             </div>
         </div>
 
@@ -711,11 +711,11 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
     <div class="gallery-grid">
         <?php
         $gallery_items = [
-            [ 'key' => 'sw_image_gallery_1', 'fallback' => 'gallery-1.jpg', 'alt' => __( 'Kameralna sala spotkań i przyjęć', 'salon-win' ), 'span' => true  ],
-            [ 'key' => 'sw_image_gallery_2', 'fallback' => 'gallery-2.jpg', 'alt' => __( 'Detal restauracji i przestrzeni eventowej', 'salon-win' ), 'span' => false ],
-            [ 'key' => 'sw_image_gallery_3', 'fallback' => 'gallery-3.jpg', 'alt' => __( 'Stół przygotowany na warsztaty lub kolację', 'salon-win' ), 'span' => false ],
-            [ 'key' => 'sw_image_gallery_4', 'fallback' => 'gallery-4.jpg', 'alt' => __( 'Przestrzeń do sesji foto i galerii sztuki', 'salon-win' ), 'span' => false ],
-            [ 'key' => 'sw_image_gallery_5', 'fallback' => 'gallery-5.jpg', 'alt' => __( 'Butikowe wnętrze na pobyt i wydarzenia', 'salon-win' ), 'span' => false ],
+            [ 'key' => 'sw_image_gallery_1', 'fallback' => 'gallery-1.jpg', 'alt' => __( 'Kameralna przestrzeń spotkań i przyjęć w Salon Win Jasło', 'salon-win' ), 'span' => true  ],
+            [ 'key' => 'sw_image_gallery_2', 'fallback' => 'gallery-2.jpg', 'alt' => __( 'Detal restauracji, wina i spokojnej przestrzeni wydarzeń', 'salon-win' ), 'span' => false ],
+            [ 'key' => 'sw_image_gallery_3', 'fallback' => 'gallery-3.jpg', 'alt' => __( 'Stół przygotowany na warsztat, degustację lub kolację', 'salon-win' ), 'span' => false ],
+            [ 'key' => 'sw_image_gallery_4', 'fallback' => 'gallery-4.jpg', 'alt' => __( 'Przestrzeń do sesji foto i prywatnej galerii sztuki', 'salon-win' ), 'span' => false ],
+            [ 'key' => 'sw_image_gallery_5', 'fallback' => 'gallery-5.jpg', 'alt' => __( 'Butikowe wnętrze apartamentów i wydarzeń w Jaśle', 'salon-win' ), 'span' => false ],
         ];
         foreach ( $gallery_items as $g ) :
         ?>
@@ -740,10 +740,10 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
             <div class="location-info fade-left">
                 <span class="eyebrow"><?php esc_html_e( 'Znajdź nas', 'salon-win' ); ?></span>
                 <h2 id="location-heading" class="display-md" style="margin-top: 0.5rem;">
-                    <?php esc_html_e( 'Odwiedź salon', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Odwiedź Salon Win w Jaśle', 'salon-win' ); ?>
                 </h2>
                 <p>
-                    <?php esc_html_e( 'Zapraszamy do Salonu-Win w Jaśle. Parking dostępny w pobliżu.', 'salon-win' ); ?>
+                    <?php esc_html_e( 'Jesteśmy w Jaśle, blisko centrum i wygodnego wyjazdu w stronę Beskidu Niskiego. To dobra baza na nocleg, kolację, warsztat, degustację lub spokojne spotkanie.', 'salon-win' ); ?>
                 </p>
 
                 <div class="info-blocks">
@@ -787,16 +787,16 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
 
                 <div class="mt-lg" style="display: flex; gap: var(--space-sm); flex-wrap: wrap;">
                     <a href="#rezerwacja" class="btn btn-gold">
-                        <span><?php esc_html_e( 'Wyślij zapytanie', 'salon-win' ); ?></span>
+                        <span><?php esc_html_e( 'Wyślij zapytanie o pobyt', 'salon-win' ); ?></span>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                     <a href="<?php echo esc_url( $booking_url ); ?>"
                        class="btn btn-outline"
                        <?php if ( $booking_is_external ) echo 'target="_blank" rel="noopener noreferrer"'; ?>>
-                        <span><?php esc_html_e( 'Nocleg przez Booking.com', 'salon-win' ); ?></span>
+                        <span><?php esc_html_e( 'Sprawdź nocleg przez Booking.com', 'salon-win' ); ?></span>
                     </a>
                     <a href="<?php echo esc_url( $maps_url ); ?>" target="_blank" rel="noopener" class="btn btn-outline">
-                        <span><?php esc_html_e( 'Otwórz w Mapach', 'salon-win' ); ?></span>
+                        <span><?php esc_html_e( 'Zobacz dojazd w Mapach', 'salon-win' ); ?></span>
                     </a>
                 </div>
             </div>
@@ -822,7 +822,7 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="<?php esc_attr_e( 'Mapa — ul. Wyspiańskiego 16, 38-200 Jasło', 'salon-win' ); ?>">
+                        title="<?php esc_attr_e( 'Mapa - ul. Wyspiańskiego 16, 38-200 Jasło', 'salon-win' ); ?>">
                     </iframe>
                 <?php endif; ?>
             </div>
@@ -840,8 +840,8 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
         <div class="newsletter-inner">
 
             <div class="newsletter-copy fade-left">
-                <h3 id="newsletter-heading"><?php esc_html_e( 'Bądź na bieżąco', 'salon-win' ); ?></h3>
-                <p><?php esc_html_e( 'Nowe pobyty, warsztaty, eventy, wellbeing i oferty specjalne. Bez spamu.', 'salon-win' ); ?></p>
+                <h3 id="newsletter-heading"><?php esc_html_e( 'Zostań blisko Salon Win', 'salon-win' ); ?></h3>
+                <p><?php esc_html_e( 'Spokojne pobyty, warsztaty, degustacje win, wydarzenia kameralne i inspiracje z regionu jasielskiego. Bez nadmiaru wiadomości.', 'salon-win' ); ?></p>
             </div>
 
             <div class="newsletter-form fade-up delay-1">
@@ -855,7 +855,7 @@ $maps_embed    = get_option( 'sw_maps_embed',   '' );
                                autocomplete="email"
                                aria-label="<?php esc_attr_e( 'Adres e-mail', 'salon-win' ); ?>">
                         <button type="submit" class="btn-newsletter">
-                            <?php esc_html_e( 'Zapisuję się', 'salon-win' ); ?>
+                            <?php esc_html_e( 'Zapisz się', 'salon-win' ); ?>
                         </button>
                     </div>
                     <p class="newsletter-consent">
