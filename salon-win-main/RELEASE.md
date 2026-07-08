@@ -1,6 +1,6 @@
 # Wydania motywu Salon Win
 
-Aktualna wersja motywu `Salon Win by labdostepnosci` to `0.0.7`. Numer wersji
+Aktualna wersja motywu `Salon Win by labdostepnosci` to `0.0.8`. Numer wersji
 jest ustawiany w nagłówku pliku `style.css` i musi być zgodny z SemVer.
 
 ## Publikowanie wersji przez GitHub Releases
@@ -34,8 +34,8 @@ salon-win-theme-X.Y.Z.zip
 Przykłady:
 
 ```text
-salon-win-0.0.7.zip
-salon-win-theme-0.0.7.zip
+salon-win-0.0.8.zip
+salon-win-theme-0.0.8.zip
 ```
 
 W katalogu głównym archiwum musi znajdować się jeden katalog `salon-win/`,
@@ -80,20 +80,20 @@ ustawień IDE, `.DS_Store` ani `Thumbs.db`.
 4. Podbić wersję w `style.css`, na przykład:
 
    ```text
-   Version: 0.0.8
+   Version: 0.0.9
    ```
 
 5. Uzupełnić `CHANGELOG.md`:
 
    ```markdown
-   ## [0.0.8] - YYYY-MM-DD
+   ## [0.0.9] - YYYY-MM-DD
    ```
 
 6. Zrobić commit:
 
    ```bash
    git add .
-   git commit -m "Release version 0.0.8"
+   git commit -m "Release version 0.0.9"
    ```
 
 7. Zmergować zmiany do `main`:
@@ -108,15 +108,15 @@ ustawień IDE, `.DS_Store` ani `Thumbs.db`.
 8. Utworzyć i wypchnąć tag:
 
    ```bash
-   git tag -a v0.0.8 -m "Release 0.0.8"
-   git push origin v0.0.8
+   git tag -a v0.0.9 -m "Release 0.0.9"
+   git push origin v0.0.9
    ```
 
 9. Po wypchnięciu taga workflow GitHub Actions automatycznie:
 
    - przygotuje katalog `salon-win/` z zawartości `salon-win-main/`,
-   - spakuje motyw do `salon-win-0.0.8.zip`,
-   - przygotuje kompatybilny asset `salon-win-theme-0.0.8.zip`,
+   - spakuje motyw do `salon-win-0.0.9.zip`,
+   - przygotuje kompatybilny asset `salon-win-theme-0.0.9.zip`,
    - utworzy GitHub Release,
    - dołączy paczki ZIP jako assety release.
 
@@ -134,7 +134,7 @@ Tag i GitHub Release `v0.0.1` już istnieją. Do Release jest dołączona paczka
 Motyw zawiera własny updater, który sprawdza najnowsze wydanie GitHub Releases
 w repozytorium:
 
-<https://github.com/labdostepnosci/salon-win>
+<https://github.com/labdostepnosci/salon-win-theme-by-labdostepnosci>
 
 Updater:
 

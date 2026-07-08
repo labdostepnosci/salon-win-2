@@ -17,9 +17,9 @@ if ( ! class_exists( 'Salon_Win_GitHub_Theme_Updater' ) ) {
     final class Salon_Win_GitHub_Theme_Updater {
         private const THEME_SLUG       = 'salon-win';
         private const THEME_NAME       = 'Salon Win by labdostepnosci';
-        private const REPOSITORY       = 'labdostepnosci/salon-win';
-        private const REPOSITORY_URL   = 'https://github.com/labdostepnosci/salon-win';
-        private const API_URL          = 'https://api.github.com/repos/labdostepnosci/salon-win/releases/latest';
+        private const REPOSITORY       = 'labdostepnosci/salon-win-theme-by-labdostepnosci';
+        private const REPOSITORY_URL   = 'https://github.com/labdostepnosci/salon-win-theme-by-labdostepnosci';
+        private const API_URL          = 'https://api.github.com/repos/labdostepnosci/salon-win-theme-by-labdostepnosci/releases/latest';
         private const TRANSIENT_NAME   = 'salon_win_github_release';
         private const CACHE_TTL        = 6 * HOUR_IN_SECONDS;
         private const ERROR_CACHE_TTL  = 30 * MINUTE_IN_SECONDS;

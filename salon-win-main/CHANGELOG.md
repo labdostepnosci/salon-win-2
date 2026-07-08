@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.8] - 2026-07-08
+
+### Changed
+- Zmieniono repozytorium motywu na `labdostepnosci/salon-win-theme-by-labdostepnosci`.
+- Zaktualizowano `GitHub Theme URI` oraz konfigurację własnego updatera GitHub Releases, aby automatyczne aktualizacje korzystały z nowego repozytorium.
+- Podbito wersję motywu do `0.0.8`.
+
+### Checked
+- Sprawdzono, że workflow GitHub Actions nadal uruchamia release automatycznie po wypchnięciu taga `vX.Y.Z`.
+- Sprawdzono, że release ZIP nadal zawiera katalog główny `salon-win/`.
+
 ## [0.0.7] - 2026-07-08
 
 ### Added
